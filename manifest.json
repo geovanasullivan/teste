@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Robô de comentários",
+  "description": "Automação de comentários",
+  "version": "1.0.0",
+  "icons": {
+    "16": "./images/logo.png",
+    "48": "./images/logo.png",
+    "128": "./images/logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.instagram.com/*"
+      ],
+      "css": [
+        "css/bootstrap.min.css",
+        "css/style.css",
+        "css/bangers-font.css"
+      ],
+      "js": [
+        "js/jquery-3.5.1.min.js",
+        "js/bootstrap.bundle.min.js",
+        "js/jquery.countdown.js",
+        "index.js"
+      ]
+    }
+  ],
+ //"host_permissions": [
+//   {
+//     "host": "maxcdn.bootstrapcdn.com",
+//     "match_pattern": "https://maxcdn.bootstrapcdn.com/*",
+//     "content_security_policy": "script-src 'self' https://maxcdn.bootstrapcdn.com; object-src 'self';"
+//   }
+// ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/logo.png"
+      ],
+      "matches": [
+        "https://www.instagram.com/*"
+      ]
+    },
+    {
+      "resources": [
+        "data/*.json",
+        "fonts/*.woff2"
+      ],
+      "matches": [
+        "https://www.instagram.com/*"
+      ]
+    }
+  ]
+}
